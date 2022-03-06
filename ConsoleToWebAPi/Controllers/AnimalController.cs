@@ -30,7 +30,7 @@ namespace ConsoleToWebAPi.Controllers
                 new AnimalModel(){Id = 10, Name = "Dog"},
                 new AnimalModel(){Id = 11, Name = "Cat"},
             };
-            return AcceptedAtAction("GetAnimals");
+            return AcceptedAtAction("GetAnimals"); //
         }
     }
 }
