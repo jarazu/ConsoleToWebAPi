@@ -7,26 +7,30 @@ using System.Threading.Tasks;
 
 namespace ConsoleToWebAPi.Controllers
 {
-    //[Route("api/[controller]")]
     [ApiController]
+    [Route("[controller]/[action]")]
     public class ValuesController : ControllerBase
     {
-        [Route("get-all")]
+        //[Route("get-all")]
         public string GetAll() {
             return "Hello get all";
         }
 
-        [Route("get-all-authors")]
+        //[Route("get-all-authors")]
         public string GetAllAuthors() {
             return "Hello from get all authors"; 
         }
-
-        [Route("books/{id}/author/{authorid}")]
+        [Route("{id}")]
+        public string GetAuthorBYID(int id)
+        {
+            return "Hello " + id;
+        }
+        //[Route("books/{id}/author/{authorid}")]
         public string GetAuthorBYID(int id, int authorid) { 
             return "Hello "+id+" "+authorid;
         }
 
-        [Route("search")]
+        //[Route("search")]
         public string SearchBooks(int id, int authorId, string name, int rating, int price) {
             return "";
         }

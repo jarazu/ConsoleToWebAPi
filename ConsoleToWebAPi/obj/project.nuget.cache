@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "PQCSiRMG3Q1ts0BB7PF4gJofVX1IumrUTm04EUK6Dcv0SJTZ5GWQWyV0rTV41jlK1MxeVmFnkMQf7uh2F77N9g==",
+  "dgSpecHash": "Y/nuTrYtmhr9QIKUv1Wb/J1I2MrMGuLB+zoFAzgrSmwddOCBe2Swbr1/RtmVG1U2ALxyDFtenkU+kK5+p6Cq7A==",
   "success": true,
-  "projectFilePath": "F:\\MyPractice\\ConsoleToWebAPi\\ConsoleToWebAPi\\ConsoleToWebAPi.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "E:\\TestProject\\ConsoleToWebAPi\\ConsoleToWebAPi\\ConsoleToWebAPi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jahangir\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.14\\microsoft.netcore.app.host.win-x64.5.0.14.nupkg.sha512"
+  ],
   "logs": []
 }
