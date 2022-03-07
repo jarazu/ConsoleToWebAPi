@@ -12,13 +12,19 @@ namespace ConsoleToWebAPi.Controllers
     [ApiController]
     public class AnimalController : ControllerBase
     {
-        [Route("")]
-        public IActionResult GetAnimals()
+        private List<AnimalModel> animals = null;
+        public AnimalController()
         {
-            var animals = new List<AnimalModel>() { 
+            animals = new List<AnimalModel>() {
                 new AnimalModel(){Id = 10, Name = "Dog"},
                 new AnimalModel(){Id = 11, Name = "Cat"},
             };
+
+        }
+
+        [Route("")]
+        public IActionResult GetAnimals()
+        {
             return Ok(animals);
         }
 
@@ -26,11 +32,16 @@ namespace ConsoleToWebAPi.Controllers
         [Route("test")]
         public IActionResult GetAnimals2()
         {
-            var animals = new List<AnimalModel>() {
-                new AnimalModel(){Id = 10, Name = "Dog"},
-                new AnimalModel(){Id = 11, Name = "Cat"},
-            };
             return AcceptedAtAction("GetAnimals"); //
+        }
+
+        [Route("{name}")]
+        public IActionResult GetAnimalsByName(string name) {
+            if (!name.Contains("ABC")) {
+                return BadRequest( );
+            }
+
+            return Ok(animals);
         }
     }
 }
